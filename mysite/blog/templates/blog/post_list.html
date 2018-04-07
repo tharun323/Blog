@@ -2,7 +2,7 @@
 {% block content %}
         {% for post in posts %}
             <div class="post">
-                <h2 style="font-family: 'Acme', sans-serif;color:#CF3DC6;"><a href="">{{ post.title }}</a></h2>
+                <h2 style="font-family: 'Acme', sans-serif;color:#CF3DC6;"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                 <p style="padding-left:650px;font-family: 'Poor Story', cursive;font-size:25px;">published: {{ post.published_date }}</p>
                 <p style="font-family: 'Rancho', cursive;font-size:30px;">{{ post.text|linebreaksbr }}</p>
             </div>
