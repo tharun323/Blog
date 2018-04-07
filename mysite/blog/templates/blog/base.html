@@ -1,6 +1,37 @@
 {% load staticfiles %}
 <html>
     <head>
+
+        <style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+</style>
+
         <title>Tharun's blog</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -12,6 +43,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
@@ -19,6 +51,9 @@
     <div class="container">
         <div class="jumbotron">
         <div class="page-header">
+             <a href="https://www.facebook.com/clidetharun" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/atkr323" class="fa fa-twitter"></a>
+           <a href="https://www.linkedin.com/in/amireddy-tharun-reddy-7691a29b" class="fa fa-linkedin"></a>
             <center>
                 {% if user.is_authenticated %}
     <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
