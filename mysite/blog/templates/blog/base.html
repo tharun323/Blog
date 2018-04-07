@@ -20,6 +20,10 @@
         <div class="jumbotron">
         <div class="page-header">
             <center>
+                {% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
+
             <h1 style="font-family: 'Cabin Condensed', sans-serif;"><a href="/">Tharun's Blog</a></h1></center>
         </div>
 
